@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE books [
+    <!ELEMENT books (book+)>
+    <!ELEMENT book (name,author,edition)>
+    <!ELEMENT author (#PCDATA)>
+    <!ELEMENT name (#PCDATA)>
+    <!ELEMENT edition (#PCDATA)>
+]>
+<?xml-stylesheet href="book.xsl" type="text/xsl"?>
+<books>
+    <book>
+        <name>C++</name>
+        <author>Bharath</author>
+        <edition>1</edition>
+    </book>
+    <book>
+        <name>Python</name>
+        <author>Hari</author>
+        <edition>3</edition>
+    </book>
+</books>

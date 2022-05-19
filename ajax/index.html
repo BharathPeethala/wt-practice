@@ -1,0 +1,39 @@
+<html>
+	<!--
+        1.	Define the User Input and Output
+        2.	Create an XMLHttpRequest Object in JavaScript 
+        3.	Specify the Handler for tracking the request object
+        4.	Opening HTTP connection using XMLHttpRequest Object
+        5.	Sending the request to the web server.
+        6.	Receiving the response and shows the response text to the user.
+    -->
+	<head>
+		<script>
+			function makerequest() {
+				// Strat of Step -2
+				try {
+					xmlReq = new XMLHttpRequest();
+				} catch (e) {
+					alert("Your browser dose not support ajax");
+				}
+				// end of Step -2
+				// Step - 3
+				xmlReq.onreadystatechange = function () {
+					if (xmlReq.readyState == 4) {
+						document.getElementById("response").innerHTML = xmlReq.responseText;
+					}
+				};
+				// Step - 4
+				xmlReq.open("GET", "http://localhost/Bharath/server.php", true);
+				// Step - 5
+				xmlReq.send(null);
+			}
+			// Step - 6
+		</script>
+	</head>
+	<body>
+		<input type="button" value="call Ajax" onclick="makerequest()" />
+		<p id="response"></p>
+	</body>
+	0
+</html>
